@@ -1,0 +1,16 @@
+# Chesroms_Surface
+
+How to compile > on the surface, I am not setup for MPI, only for serial run as of May 2018.
+to compile, go in /mnt/c/roms and execute .build.chesapeake.bash
+
+I need to test the reproducibility of the results between the surface and the DELL.
+
+in /mnt/c/roms/chesapeake/chesapeake.in around line 75, NtileI == 1 NtileJ==1
+This is where to edit when running with MPI. Increase the number of threads I think.
+
+At first, I thought the model was not running, but when it seems to be hung up, it can be because the exec command is not correct. 
+3 May 2018 
+>oceanS : model hung up
+>oceanS <chesapeake.in
+
+!!!REMEMBER to pass in the in file!!!
